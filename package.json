@@ -4,6 +4,9 @@
   "description": "Asynchronously wait until all the required resources are ready",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
   "files": [
     "index.js"
   ],
@@ -26,5 +29,7 @@
     "control flow"
   ],
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "tape": "^3.4.0"
+  }
 }
