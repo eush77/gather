@@ -10,7 +10,7 @@ var async = function (fn) {
 };
 
 
-test('async-gather', function (t) {
+test('gather', function (t) {
   var done = gather(function (a, b, c) {
     t.equal(a, 1);
     t.equal(b, 2);
