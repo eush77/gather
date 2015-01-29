@@ -1,7 +1,7 @@
 {
   "name": "gather",
   "version": "0.0.0",
-  "description": "Asynchronously wait until all the required resources are ready",
+  "description": "Defer function execution until all its arguments are ready",
   "author": "Eugene Sharygin <eush77@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -19,14 +19,18 @@
     "url": "https://github.com/eush77/gather/issues"
   },
   "keywords": [
+    "defer",
     "async",
     "gather",
     "wait",
     "callback",
+    "function",
     "after",
     "asynchronous",
     "arguments",
-    "control flow"
+    "control flow",
+    "argument",
+    "dependency"
   ],
   "dependencies": {},
   "devDependencies": {
