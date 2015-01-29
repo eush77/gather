@@ -7,8 +7,8 @@ module.exports = function (done) {
 
   return function () {
     for (var i = 0; i < arguments.length; ++i) {
-      if (arguments[i] != null) {
-        count += (args[i] == null);
+      if (arguments[i] !== undefined) {
+        count += (args[i] === undefined);
         args[i] = arguments[i];
       }
     }

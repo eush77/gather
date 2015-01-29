@@ -12,23 +12,23 @@ var async = function (fn) {
 
 test('gather', function (t) {
   var done = gather(function (a, b, c) {
-    t.equal(a, 1);
-    t.equal(b, 2);
-    t.equal(c, 3);
+    t.equal(a, null);
+    t.equal(b, 0);
+    t.equal(c, 1);
     t.end();
   });
 
   async(function () {
-    done(null, 2, null);
+    done(undefined, 0, undefined);
   });
 
   async(function () {
     async(function () {
       async(function () {
-        done(1, null, null);
+        done(null, undefined, undefined);
       });
     });
   });
 
-  done(null, null, 3);
+  done(undefined, undefined, 1);
 });
