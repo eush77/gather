@@ -32,3 +32,25 @@ test('gather', function (t) {
 
   done(undefined, undefined, 1);
 });
+
+
+test('example', function (t) {
+  var feed = gather(function (a, b) {
+    log(a + b);
+  });
+
+  async(function () {
+    async(function () {
+      feed('foo', undefined);
+    });
+  });
+
+  async(function () {
+    feed(undefined, 'bar');
+  });
+
+  function log(foobar) {
+    t.equal(foobar, 'foobar');
+    t.end();
+  }
+});
