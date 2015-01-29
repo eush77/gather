@@ -14,7 +14,7 @@ Control flow utility that runs a callback after all the dependencies are (asynch
 ## Example
 
 ```js
-var foo = gather(function (a, b) {
+var done = gather(function (a, b) {
   console.log(a + b);
 });
 
